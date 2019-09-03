@@ -15,7 +15,7 @@ The result of the client packet test is:
 
 ```
 cd  $GOPATH/src
-git clone https://github.com/w910820618/thunder.git
+git clone https://github.com/yunshoutech/thunder.git
 cd thunder 
 go build *.go
 chmod 777 ./client
