@@ -1,17 +1,17 @@
-## Thunder
+## 简介
 
-Thunder is a contracting tool based on the UDP protocol. It was developed using the Golang language. Thanks to golang's coroutine mechanism, multiple clients can send multiple requests per second to a single server.
+这个软件是一个基于UPD协议的发包机器。该软件使用Go语言进行编写，得益于Go语言高效的Goroutine机制，可以轻松实现并发多了客户端同时像服务端发送请求。
 
-The lightning test server configuration is: 32g memory Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GH.
+测试服务器的硬件配置为: 32g memory Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GH.
 
-Set the parameter to 18 threads and send 64B length UDP packets.
+测试实验时启动了18个协程，并发送64B的UDP包。
 
-The result of the client packet test is:
+测试结果如图所示
 ![image](https://github.com/w910820618/picture_repo/blob/master/1567492469993.png)
 
-## Installation and use instructions
+## 安装和使用说明
 
-### Installation
+### 安装
 
 ```
 cd  $GOPATH/src
@@ -21,9 +21,9 @@ go build *.go
 chmod 777 ./client
 ```
 
-### Use instructions
+### 使用说明
 
-- Server
+- 服务端
 
 ```
 ./client -s -h 127.0.0.1
@@ -33,7 +33,7 @@ chmod 777 ./client
 
 -h IP address bound to the server, the default is 127.0.0.1
 
-- Client
+- 客户端
 
 ```
 ./client -h 127.0.0.1 -n 18 -d 2000s -len 64B
