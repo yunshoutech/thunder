@@ -29,9 +29,9 @@ chmod 777 ./client
 ./client -s -h 127.0.0.1
 ```
 
- -s Whether to start the server, the default is false
+ -s 是否启动服务器端，默认为否
 
--h IP address bound to the server, the default is 127.0.0.1
+-h 服务端绑定的IP地址，默认为127.0.0.1
 
 - 客户端
 
@@ -39,11 +39,11 @@ chmod 777 ./client
 ./client -h 127.0.0.1 -n 18 -d 2000s -len 64B
 ```
 
--h IP address bound to the server. The default is 127.0.0.1.
+-h 目标服务端地址，默认为：127.0.0.1
 
--n number of coroutines started
+-n 启动协程的数量
 
--d program runtime
+-d 程序运行时间
 
--len The number of bytes sent by UDP
+-len UDP包的长度
 
